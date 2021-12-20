@@ -19,12 +19,12 @@
 
 ## 3)
 
-db.attendance.find({heldOn:ISODate("2020-11-27T00:00:00Z")},{userId:1}).pretty().toArray()
+### db.attendance.find({heldOn:ISODate("2020-11-27T00:00:00Z")},{userId:1}).pretty().toArray()
 
 ![image](https://user-images.githubusercontent.com/77113035/146791943-585cd0ec-b343-48db-a3fd-dd43afcd0544.png)
 
 
-db.drives.find({date:ISODate("2020-11-27T00:00:00Z")},{driveId:1,userId:1}).pretty().toArray()
+### db.drives.find({date:ISODate("2020-11-27T00:00:00Z")},{driveId:1,userId:1}).pretty().toArray()
 
 ![image](https://user-images.githubusercontent.com/77113035/146792216-f967238b-33d4-4cee-beb3-2bc08525c9e5.png)
 
@@ -38,7 +38,8 @@ db.drives.find({date:ISODate("2020-11-27T00:00:00Z")},{driveId:1,userId:1}).pret
 ![image](https://user-images.githubusercontent.com/77113035/146788382-6832e533-50ca-4a3c-9722-1e2793cf3906.png)
 
 
-5) 
+## 5) 
+
 ### db.mentors.aggregate([{"$project":{"mentorName":1,"menteeCount":{"$size":"$userId"}}},{"$match":{"menteeCount":{"$gte":15}}}]).pretty()
 
 ![image](https://user-images.githubusercontent.com/77113035/146773156-3a255e23-3c43-435c-84cb-0abe0d66cc77.png)
