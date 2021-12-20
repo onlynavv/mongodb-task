@@ -6,7 +6,6 @@
 
 ![image](https://user-images.githubusercontent.com/77113035/146791130-5fbc03b5-d4f0-4353-9757-e0fa073bf8fe.png)
 
-## Find all the tasks which are thought in the month of October
 
 ### db.tasks.aggregate([{$project:{description:1, month:{$month:"$taughtAt"}}},{$match:{month:10}}]).pretty()
 
